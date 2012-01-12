@@ -30,6 +30,12 @@
 
     <!-- Configures the @Controller programming model -->
     <mvc:annotation-driven/>
+    
+    <!-- Mapping Webapp root to /resources/**, hidden the website's directory structure. -->
+    <mvc:resources location="/statics/**" mapping="/resources/**"/>
+    
+    <!-- Using Container's default servlet to handler static resources -->
+    <mvc:default-servlet-handler/>
 
     <!-- Convenient way to map URLs to JSPs w/o having a Controller -->
     <mvc:view-controller path="/admin/activeUsers" view-name="admin/activeUsers"/>
