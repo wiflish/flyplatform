@@ -5,17 +5,17 @@
              xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
               http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
-    <http pattern="/images/**" security="none"/>
-    <http pattern="/styles/**" security="none"/>
-    <http pattern="/scripts/**" security="none"/>
+    <http pattern="/resources/**" security="none"/>
+    <http pattern="/login" security="none"/>
+    <http pattern="/WEB-INF/pages/login.jsp*" security="none"/>
+    <http pattern="/logout" security="none"/>
+    <http pattern="/WEB-INF/pages/logout.jsp*" security="none"/>
 
     <http auto-config="true">
-        <intercept-url pattern="/app/admin/**" access="ROLE_ADMIN"/>
-        <intercept-url pattern="/app/passwordHint*" access="ROLE_ANONYMOUS,ROLE_ADMIN,ROLE_USER"/>
-        <intercept-url pattern="/app/signup*" access="ROLE_ANONYMOUS,ROLE_ADMIN,ROLE_USER"/>
-        <intercept-url pattern="/app/**" access="ROLE_ADMIN,ROLE_USER"/>
+        <intercept-url pattern="/**" access="ROLE_ADMIN,ROLE_USER"/>
         <form-login login-page="/login" authentication-failure-url="/login?error=true" login-processing-url="/j_security_check"/>
         <remember-me user-service-ref="userDao" key="e37f4b31-0c45-11dd-bd0b-0800200c9a66"/>
+        <logout logout-url="/lougout" logout-success-url="/"/>
     </http>
 
     <authentication-manager>

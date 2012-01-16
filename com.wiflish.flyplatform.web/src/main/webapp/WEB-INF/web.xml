@@ -84,14 +84,14 @@
             <param-value>-1</param-value>
         </init-param>
     </filter>
-    <!-- <filter>
+    <filter>
         <filter-name>securityFilter</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
         <init-param>
             <param-name>targetBeanName</param-name>
             <param-value>springSecurityFilterChain</param-value>
         </init-param>
-    </filter> -->
+    </filter>
     <filter>
         <filter-name>sitemesh</filter-name>
         <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
@@ -123,13 +123,13 @@
         <filter-name>rewriteFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-    <!-- <filter-mapping>
+    <filter-mapping>
         <filter-name>securityFilter</filter-name>
         <url-pattern>/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
         <dispatcher>INCLUDE</dispatcher>
-    </filter-mapping> -->
+    </filter-mapping>
 <!--     <filter-mapping>
         <filter-name>exportFilter</filter-name>
         <url-pattern>/app/*</url-pattern>

@@ -12,5 +12,6 @@ terminate.setPath(contextPath != null && contextPath.length() > 0 ? contextPath 
 terminate.setMaxAge(0);
 response.addCookie(terminate);
 %>
-
-<c:redirect url="/mainMenu"/>
+<script type="text/javascript">
+    location.href = '<c:url value="/"/>';
+</script>

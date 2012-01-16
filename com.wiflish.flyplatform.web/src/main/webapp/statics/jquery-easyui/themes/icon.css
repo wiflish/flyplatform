@@ -75,3 +75,12 @@
 .icon-navigator{
 	background:url('icons/navigator.png') no-repeat;
 }
+.icon-switch-themes{
+	background:url('icons/switch-themes.png') no-repeat;
+}
+.icon-theme-cupertino{
+	background:url('icons/theme-cupertino.png') no-repeat;
+}
+.icon-theme-smoothness{
+	background:url('icons/theme-smoothness.png') no-repeat;
+}

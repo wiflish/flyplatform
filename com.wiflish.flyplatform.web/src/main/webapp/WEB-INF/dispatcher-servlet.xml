@@ -39,6 +39,8 @@
 
     <!-- Convenient way to map URLs to JSPs w/o having a Controller -->
     <mvc:view-controller path="/admin/activeUsers" view-name="admin/activeUsers"/>
+    <mvc:view-controller path="/login" view-name="login"/>
+    <mvc:view-controller path="/logout" view-name="logout"/>
     <mvc:view-controller path="/main" view-name="main"/>
 
     <!-- View Resolver for JSPs -->
